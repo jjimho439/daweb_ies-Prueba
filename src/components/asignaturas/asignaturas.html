@@ -12,14 +12,17 @@
   </thead>
 
   <tbody>
-  @for (asignatura of asignaturas; track asignatura.id) {
+    @for (asignatura of asignaturas; track asignatura.id) {
     <tr>
       <td>{{ asignatura.id }}</td>
       <td>{{ asignatura.nombre }}</td>
       <td>{{ asignatura.horas }}</td>
       <td>{{ asignatura.profesor.nombre }}</td>
-      <td><a [routerLink]="['/asignatura',asignatura.id]" class="btn">Ver</a></td>
+      <td>
+        <a [routerLink]="['/asignatura',asignatura.id]" class="btn">Ver</a>
+        <a [routerLink]="['/asignatura', asignatura.id, 'alumnos']" class="btn">Ver Alumnos</a>
+      </td>
     </tr>
-  }
+    }
   </tbody>
 </table>

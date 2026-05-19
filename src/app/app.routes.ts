@@ -8,18 +8,20 @@ import { MatriculaDetail } from '../components/matricula-detail/matricula-detail
 import { Matriculas } from '../components/matriculas/matriculas';
 import { ProfesorDetail } from '../components/profesor-detail/profesor-detail';
 import { Profesores } from '../components/profesores/profesores';
+import { AlumnosAsignatura } from '../components/alumnos-asignatura/alumnos-asignatura';
 
 export const routes: Routes = [
 
-    {path: '', component: Landing},
-    {path: 'inicio', component: Landing},
-    {path: 'alumnos', component: Alumnos},
-    {path: 'profesores', component: Profesores},
-    {path: 'asignaturas', component: Asignaturas},
-    {path: 'matriculas', component: Matriculas},
-    {path: 'matricula/:id', component: MatriculaDetail},
-    {path: 'profesor/:id', component: ProfesorDetail},
-    {path: 'asignatura/:id', component: AsignaturaDetail},
-    {path: 'alumno/:id', component: AlumnoDetail}
-    
+    { path: '', component: Landing },
+    { path: 'inicio', component: Landing },
+    { path: 'alumnos', component: Alumnos },
+    { path: 'profesores', component: Profesores },
+    { path: 'asignaturas', component: Asignaturas },
+    { path: 'matriculas', component: Matriculas },
+    { path: 'matricula/:id', component: MatriculaDetail },
+    { path: 'profesor/:id', component: ProfesorDetail },
+    { path: 'asignatura/:id', component: AsignaturaDetail },
+    { path: 'alumno/:id', component: AlumnoDetail },
+    { path: 'asignatura/:id/alumnos', component: AlumnosAsignatura }
+
 ];
