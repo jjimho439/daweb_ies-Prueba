@@ -1,0 +1,25 @@
+<h2>Listado de asignaturas</h2>
+
+<table class="tabla">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Horas</th>
+      <th>Profesor</th>
+      <th>Detalle</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  @for (asignatura of asignaturas; track asignatura.id) {
+    <tr>
+      <td>{{ asignatura.id }}</td>
+      <td>{{ asignatura.nombre }}</td>
+      <td>{{ asignatura.horas }}</td>
+      <td>{{ asignatura.profesor.nombre }}</td>
+      <td><a [routerLink]="['/asignatura',asignatura.id]" class="btn">Ver</a></td>
+    </tr>
+  }
+  </tbody>
+</table>

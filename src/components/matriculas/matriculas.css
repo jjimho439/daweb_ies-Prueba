@@ -1,0 +1,30 @@
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.tabla th, .tabla td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.tabla th {
+  background-color: #1976d2;
+  color: white;
+}
+
+.btn{
+  display: inline-block;
+  padding: 2px 16px;
+  background-color: #1976d2;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.btn:hover{
+  background-color: #1565c0;
+}

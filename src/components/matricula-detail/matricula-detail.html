@@ -1,0 +1,101 @@
+<h2>Detalle de la matrícula</h2>
+
+@if(matricula){
+
+<div class="detalle">
+
+  <div class="foto">
+    <img src="/matricula.png" alt="Foto matrícula">
+  </div>
+
+  <div class="contenido">
+
+    <!-- DATOS MATRÍCULA -->
+    <div class="seccion">
+      <h3>Datos de la matrícula</h3>
+
+      <div class="campo">
+        <div class="label">ID Matrícula</div>
+        <div class="valor">{{ matricula.idMat }}</div>
+      </div>
+
+      <div class="campo">
+        <div class="label">Curso</div>
+        <div class="valor">{{ matricula.curso }}</div>
+      </div>
+
+      <div class="campo">
+        <div class="label">Nota Media</div>
+        <div class="valor">{{ matricula.notaMedia }}</div>
+      </div>
+    </div>
+
+    <!-- DATOS ALUMNO -->
+    <div class="seccion">
+      <h3>Datos del alumno</h3>
+
+      <div class="campo">
+        <div class="label">ID Alumno</div>
+        <div class="valor">{{ matricula.alumno.id }}</div>
+      </div>
+
+      <div class="campo">
+        <div class="label">Nombre</div>
+        <div class="valor">{{ matricula.alumno.nombre }}</div>
+      </div>
+
+      <div class="campo">
+        <div class="label">Apellidos</div>
+        <div class="valor">{{ matricula.alumno.apellidos }}</div>
+      </div>
+
+      <div class="campo">
+        <div class="label">iPasen</div>
+        <div class="valor">{{ matricula.alumno.ipasen }}</div>
+      </div>
+    </div>
+
+    <!-- DATOS ASIGNATURA -->
+    <div class="seccion">
+      <h3>Datos de la asignatura</h3>
+
+      <div class="campo">
+        <div class="label">ID Asignatura</div>
+        <div class="valor">{{ matricula.asignatura.id }}</div>
+      </div>
+
+      <div class="campo">
+        <div class="label">Nombre</div>
+        <div class="valor">{{ matricula.asignatura.nombre }}</div>
+      </div>
+
+      <div class="campo">
+        <div class="label">Horas</div>
+        <div class="valor">{{ matricula.asignatura.horas }}</div>
+      </div>
+    </div>
+
+    <!-- DATOS PROFESOR -->
+    <div class="seccion">
+      <h3>Datos del profesor</h3>
+
+      <div class="campo">
+        <div class="label">Profesor</div>
+        <div class="valor">
+          {{ matricula.asignatura.profesor.nombre }}
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+}@else {
+  <p>Cargando matrícula...</p>
+}
+
+<button class="btn-volver" [routerLink]="['/matriculas']">
+  Volver
+</button>
